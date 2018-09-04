@@ -14,16 +14,16 @@
     requests.post(url = url, data = 参数字典)
     response.text
 
-5、POST：form-data（上传二进制文件）
+五、POST：form-data（上传二进制文件）
     data_dic = {'myfile': open('F:\\discuz.jmx', 'rb')}  #第一个参数是：通过web页面中，input框的name属性。第二个参数是：读取本地文件为二进制流文件
     response = requests.post(url = url, files = data_dic)
     response.text
 
-6、POST：raw（text/xml）
+六、POST：raw（text/xml）
     reponse = requests.post(url=url, headers = {'Content-Type': 'text/xml'}, data = 字符串)
     response.text
 
-7、POST：raw（application/json），必须在请求头中指定Content-Type为application/json
+七、POST：raw（application/json），必须在请求头中指定Content-Type为application/json
     reponse = requests.post(url=url, headers = {'Content-Type': 'application/json'}, json=参数字典)
     response.json  #字典
     response.json.get('')  #通过字典的key取value值
